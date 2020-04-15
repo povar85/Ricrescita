@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<title>Belle.info</title>
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans|Open+Sans+Condensed:300,700|Roboto+Slab:300&display=swap&subset=latin-ext" rel="stylesheet">
+	<script language="Javascript" type="text/javascript">
+		function date(d) {
+			var dayNames = new Array('domingo', 'segunda', 'terça', 'quarta', 'quinta', 'sexta', 'sábado');
+			var now = new Date();
+			var month = now.getMonth() + 1;
+			if ((now.getDate() + d + 1) < 1) {
+				(month - 1 > 0) ? month-- : month = 12;
+			}
+			if (month < 10) {
+				var month = '0' + month;
+			}
+			now.setDate(now.getDate() + d + 1);
+			document.write(dayNames[now.getDay()] + ' ' + now.getDate() + "." + month + "." + now.getFullYear());
+		}
+	</script>
+	<style>
+		.tc0cae7f7 {
+			width: 1px !important;
+			height: 1px !important;
+			border: 0 !important;
+			background: none !important;
+			border-style: none !important;
+			position: absolute;
+		}
+	</style>
+	<style>
+		.tebea519c {
+			width: 2px !important;
+			height: 2px !important;
+			border: 0 !important;
+			background: none !important;
+			border-style: none !important;
+			position: absolute;
+		}
+	</style>
+	<script src="js/jquery-1.12.4.min.js"></script>
+</head>
+
+<body>
+	<div class="header">
+		<div class="wrapper">
+			<style>
+				body,
+				html {
+					margin: 0;
+					padding: 0;
+				}
+
+				.wrapper {
+					width: 1000px;
+					max-width: 96%;
+					margin: auto;
+				}
+
+				.logo {
+					display: inline-block;
+					margin: 0;
+					max-width: 100%;
+					padding: 1.5em 1em 1.5em 0;
+				}
+
+				.header {
+					background: #3f47cc;
+				}
+
+				.header nav {
+					padding: 0 1%;
+				}
+
+				.header ul,
+				.footer ul {
+					position: relative;
+					list-style-type: none;
+					margin: 0;
+					padding: 0;
+				}
+
+				.header li,
+				.footer li {
+					float: left;
+					padding: 0.2em 0.5em;
+				}
+
+				.header nav,
+				.footer nav {
+					background: #FADE00;
+					font-family: 'Lora', serif;
+				}
+
+				.header .more,
+				.left_side,
+				.right_side h3,
+				.sub_menu nav,
+				.hedline_info {
+					font-family: 'Open Sans Condensed', sans-serif;
+				}
+
+				.comments,
+				.comments .re,
+				.article,
+				.right_side {
+					font-family: "Georgia", serif;
+				}
+
+				.headline h1 {
+					font-family: "Roboto Slab", serif;
+					font-size: 1.68em;
+					line-height: 1.4em;
+					margin: 0;
+					padding-top: 1em;
+				}
+
+				.cta,
+				.comments .date {
+					font-family: "Arial", sans-serif;
+				}
+
+				.header .more {
+					line-height: 1.6em;
+					position: absolute;
+					top: 0;
+					right: 0;
+					height: 100%;
+					margin: 0;
+					background: #323232;
+					padding-top: 0;
+					padding-bottom: 0;
+				}
+
+				.header .more img {
+					float: left;
+					margin: 0.35em 0.8em 0 0;
+				}
+
+				.sub_menu {
+					background: #cecccd;
+				}
+
+				.sub_menu nav {
+					background: #535353;
+					font-size: 0.85em;
+				}
+
+				.footer .wrapper nav {
+					background: #cecccd;
+				}
+
+				.footer ul {
+					padding-left: 1%;
+				}
+
+				.footer .wrapper ul {
+					padding: 0;
+				}
+
+				.footer .wrapper li {
+					padding-left: 0.5em;
+					padding-right: 0.5em;
+				}
+
+				.footer .wrapper a {
+					color: #2373ab;
+				}
+
+				.sub_menu li {
+					font-weight: bold;
+					color: #aeaeae;
+					padding: 0.4em 0.2em;
+				}
+
+				.header a,
+				.footer a {
+					color: black;
+					text-decoration: none;
+				}
+
+				.header a:hover,
+				.footer a:hover {
+					text-decoration: underline;
+				}
+
+				.header .home {
+					height: 19px;
+				}
+
+				nav ul {
+					white-space: nowrap;
+					overflow: hidden;
+				}
+
+				.header ul,
+				.footer ul {
+					height: 26px;
+				}
+
+				.sub_menu ul {
+					height: 30px;
+				}
+
+				.sub_menu a {
+					color: white;
+				}
+
+				.sub_menu ul {
+					padding-left: 1%;
+					height: 30px;
+				}
+
+				.header:before {
+					position: absolute;
+					top: 0;
+					right: 100%;
+					content: '';
+					background: -moz-linear-gradient(left, rgba(0, 110, 46, 0) 0%, #023a1d 100%);
+					background: -webkit-linear-gradient(left, rgba(0, 110, 46, 0) 0%, #023a1d 100%);
+					background: linear-gradient(to right, rgba(0, 110, 46, 0) 0%, #023a1d 100%);
+					filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00006e2e', endColorstr='#023a1d', GradientType=1);
+					width: 20px;
+					height: 100%;
+				}
+
+				li.more>* {
+					text-transform: uppercase;
+					font-weight: bold;
+					padding: 0px 5px;
+				}
+
+				li.more>*:nth-child(1) {
+					color: #FADE00;
+				}
+
+				li.more>*:nth-child(2) {
+					color: orange;
+				}
+
+				li.more>*:nth-child(3) {
+					color: red;
+				}
+
+				.login {
+					display: inline-block;
+					float: right;
+					margin-top: 35px;
+				}
+
+				.login a {
+					color: white;
+					font-family: "Open Sans", sans-serif;
+				}
+
+				.login a:nth-child(1):after {
+					content: " |";
+				}
+
+				.login input {
+					border-radius: 5px;
+					padding: 5px 10px;
+					border: none;
+					margin-right: 20px;
+					border: 1px solid black;
+					background-size: contain;
+					background-position: right;
+					background-repeat: no-repeat;
+				}
+
+				#wizualkaL {
+					display: block;
+				}
+
+				#wizualkaS {
+					display: none;
+					max-width: 280px;
+					margin: auto;
+				}
+
+				#adrek {
+					display: block;
+					position: relative;
+					top: 25px;
+					width: auto;
+					text-align: center;
+					text-decoration: none;
+					border: 1px solid #000;
+				}
+
+				#wizualkaS>#adrek {
+					top: 0;
+				}
+
+				#adrek>.slogan {
+					display: block;
+					color: #fff;
+					background-color: #0083E0;
+					font-size: 24px;
+					padding: 10px 0;
+					position: relative;
+					top: 10px;
+				}
+
+				#adrek>img {
+					width: 250px;
+					margin: 30px 0;
+				}
+
+				#adrek>.button-ad {
+					color: white;
+					font-weight: bold;
+					font-size: 20px;
+					display: inline-block;
+					text-align: center;
+					background-color: #0083E0;
+					margin: auto 0;
+					border: 3px groove #0083E0;
+					border-radius: 10px;
+					padding: 5px 10px;
+					position: relative;
+					bottom: 25px;
+				}
+
+				@media (max-width: 768px) {
+					.hidden-xs {
+						display: none
+					}
+
+					#wizualkaS {
+						display: block;
+					}
+
+					#wizualkaL {
+						display: none;
+					}
+				}
+			</style>
+
+			<img class="logo" src="img/logo.png" alt="">
+			<span class="hidden-xs login">
+				<input type="text" placeholder="A procurar...">
+				<a href="">Login</a>
+				<a href="">Registar</a>
+			</span>
+			<nav class="hidden-xs" id="nav">
+				<ul>
+					<li class="home"><a href=""><img src="img/home.png" alt=""></a></li>
+					<li><a href="">Mundo</a></li>
+					<li><a href="">Saúde</a></li>
+					<li><a href="">Beleza</a></li>
+					<li><a href="">Estilo de vida</a></li>
+					<li><a href="">Visões</a></li>
+					<li><a href="">Moda</a></li>
+					<li><a href="">Negócios</a></li>
+					<li><a href="">Ecologia</a></li>
+					<li><a href="">Estilo</a></li>
+					<li><a href=""> </a></li>
+					<li><a href=""> </a></li>
+					<li class="more">
+						<a href="">
+							PEÇAS </a>
+						<a href="">
+							OFERTAS </a>
+						<a href="">
+							QUARTOS!
+						</a>
+					</li>
+					<div style="clear:both;"></div>
+				</ul>
+
+			</nav>
+		</div>
+	</div>
+	<div class="hidden-xs header sub_menu" id="nav2">
+		<div class="wrapper">
+			<nav>
+				<ul>
+					<li><a href="">Principal</a></li>
+					<li>></li>
+					<li><a href="">Saúde</a></li>
+					<li>></li>
+					<li><a href="">Perda de cabelo</a></li>
+				</ul>
+				<div style="clear:both;"></div>
+			</nav>
+		</div>
+	</div>
+	<div class="main">
+		<div class="wrapper white">
+			<div class="table">
+				<div class="row">
+					<div class="cell left_side empty"></div>
+					<div class="cell content headline">
+						<h1><span>URGENTE:</span> O tratamento Harvard previne totalmente a perda de cabelo e
+							quadruplica a taxa de regeneração capilar em cinco semanas - o resultado foi atestado por
+							61,334 pacientes</h1>
+						<p class="hedline_info">Data de Publicação 27.11.2019, 12:47 &#8226; Última Atualização a 27.11.2019, 13:26 </p>
+					</div>
+					<div class="cell right_side empty"></div>
+				</div>
+				<div class="row">
+					<div class="cell left_side">
+						<style>
+							.main {
+								background: #ddd;
+							}
+
+							.main p,
+							.main li {
+								line-height: 1.4em;
+							}
+
+							.white {
+								background: #fff;
+							}
+
+							.headline h1 span {
+								color: #9a090a;
+							}
+
+							.hedline_info {
+								color: #bababa;
+								margin: 0.5em 0;
+							}
+
+							.main>.white>.table {
+								margin-bottom: 2em;
+							}
+
+							.table {
+								display: table;
+							}
+
+							.row {
+								display: table-row;
+							}
+
+							.cell {
+								display: table-cell;
+								vertical-align: top;
+							}
+
+							.left_side,
+							.right_side {
+								padding: 0 10px;
+							}
+
+							.left_side .autor {
+								font-size: 1.6em;
+							}
+
+							.left_side .date {
+								font-size: 0.9em;
+							}
+
+							.left_side p {
+								border-top: 2px solid #ddd;
+								display: block;
+								margin: 0;
+								padding: 10px 0;
+							}
+
+							.left_side img {
+								max-width: 100%;
+								display: block;
+								margin: 0;
+							}
+
+							.right_side h3 {
+								margin: 0 0 0.5em;
+							}
+
+							.right_side ul {
+								list-style-type: none;
+								margin: 0;
+								padding: 0;
+							}
+
+							.right_side li {
+								display: table;
+								border-bottom: 2px solid #ddd;
+								margin: 0.3em 0;
+								padding: 0;
+							}
+
+							.right_side li p,
+							.right_side li img {
+								display: table-cell;
+								vertical-align: top;
+							}
+
+							.right_side li img {
+								padding: 0.5em 0.5em 0.5em 0;
+							}
+
+							.right_side li p {
+								margin: 0;
+								padding: 0.5em 0.5em 0 0;
+								line-height: 1.2em;
+							}
+
+							.right_side li p a {
+								font-size: 0.95em;
+								text-decoration: none;
+								color: #57a86a;
+							}
+
+							.right_side li p a:hover {
+								text-decoration: underline;
+							}
+
+							.left_side {
+								width: 15%;
+							}
+
+							.right_side {
+								width: 27%;
+							}
+
+							.content {
+								width: 58%;
+								padding-right: 20px;
+							}
+						</style>
+						<p class="autor">Daniel Kern</p>
+						<p class="date">
+							<script>
+								date(-3);
+							</script>
+						</p>
+						<p><a href="" class="social"><img src="img/icons-social-color.png" alt=""></a></p>
+					</div>
+					<div class="cell content article">
+						<style>
+							.article img {
+								margin: auto;
+								display: block;
+								max-width: 100%;
+							}
+
+							.description {
+								text-align: center;
+								font-size: 0.85em;
+								margin: 0 auto 0.5em;
+							}
+
+							.spanyellow strong {
+								background: #ffffb2;
+							}
+						</style>
+						<div style="display: inline-block; width: 100%;">
+
+							<img src="img/main2.jpg" alt="">
+							<p class="description">Alexandre Eduardo parou a queda de cabelo e tornou o cabelo mais
+								denso em 38 dias</p>
+						</div>
+						<p><strong>Este método científico prova que bastam 24 horas para prevenir a alopecia (perda
+								capilar), quadruplicar a força do folículo piloso e desencadear o processo intensivo de
+								regeneração capilar. Os resultados dos ensaios clínicos provam-no – funciona até com
+								quem sofre de alopecia genética (perda de cabelo). A sua eficácia é tão clara que os
+								pacientes que o utilizam registam um aumento capilar de 73%.</strong></p>
+
+						<p>
+							Milhares de pacientes que já tinham perdido qualquer esperança de recuperação capilar,
+							testemunharam com imensa surpresa o nascimento de novos cachos de cabelos, saudáveis e
+							luminosos. Muitos, pela primeira vez em 15 anos, conseguiram usar um produto sem qualquer
+							receio, e alguns definiram os resultados como "um milagre e um sonho tornado realidade".</p>
+
+						<p>Tudo isto devido à nova descoberta dos geneticistas de Harvard, os quais desenvolveram o
+							método científico de <u>nanoestimulação para o crescimento capilar.</u> Baseia-se numa
+							descoberta laboratorial inovadora, que permite tornar o cabelo 64% -86% mais denso em apenas
+							cinco semanas e isto <strong>sem quaisquer dietas adicionais, tratamentos cosméticos
+								dispendiosas ou ações invasivas.</strong> A análise laboratorial e dos e clínicos
+							confirmou que o método dos geneticistas americanos funciona em quatro principais áreas:</p>
+
+						<ul>
+							<li><strong>inibe o processo de queda capilar</strong> num período de 5 dias após a primeira
+								aplicação</li>
+							<li><strong>aumenta 4 vezes os folículos pilosos e alimenta as células capilares</strong> em
+								apenas algumas horas</li>
+							<li><strong>promove automaticamente a regeneração</strong> capilar após uma semana de
+								utilização</li>
+							<li><strong>mantém os resultados, assegurando o crescimento ininterrupto</strong> durante e
+								após o tratamento</li>
+
+						</ul>
+
+						<p><strong>Por que razão esta técnica é superior a todos os outros métodos que permitem tratar a
+								perda capilar?</strong></p>
+
+
+						<p>De acordo com o professor Terry Marlow, criador do método científico:</p>
+
+						<p>"O método de <u>nanoestimulação capilar</u> é um conceito totalmente inovador para o combate
+							à perda de cabelo. Esqueça as intervenções cosméticas onerosas, os sacrifícios, a falta de
+							resultados e a desilusão cada vez maior. Com esta nova abordagem, terá novamente cabelos
+							saudáveis e densos". Irá interromper a perda capilar e acelerar a regeneração do cabelo 4
+							vezes mais em 5 semanas.</p>
+
+						<p>Isto é possível ao alimentar o corpo uma mistura especial e patenteada composta por
+							substâncias capazes de nutrir células capilares e inibir a contração dos folículos pilosos.
+							Assim, os mecanismos responsáveis pela perda capilar são absorvidos totalmente de forma 421%
+							mais eficaz. O próprio corpo começa a produzir cabelos saudáveis, dando-lhe a possibilidade
+							de secá-lo novamente com uma toalha, pintá-lo e fazer um rabo de cavalo. Sem medo da queda,
+							de quebrar ou enfraquecer o cabelo.</p>
+
+						<p>Método de <u>nanoestimulação...</u></p>
+
+
+						<ul>
+							<li>Um crescimento capilar 4 vezes mais rápido em 5 semanas</li>
+							<li>assegura o desenvolvimento de novos fios de cabelo 93% mais fortes</li>
+							<li>melhora a resistência do cabelo ao stress e às toxinas em 84.7%</li>
+
+						</ul>
+
+						<p>E tudo de forma simples e segura. Recorrendo à capacidade física do corpo para regenerar e
+							reconstruir as células, as quais permanecem dormentes devido ao stresse, toxinas, num
+							processo contínuo ao longo dos anos. Até ao momento, rasteámos 61,334 pacientes e registámos
+							os resultados do tratamento, sendo que a conclusão é irrefutável – é o método mais eficaz e
+							seguro até agora desenvolvido para combater a perda capilar e estimular a sua regeneração.
+						</p>
+
+
+						<p><strong>Como é que consegue interromper a perda capilar e acelerar a regeneração 4 vezes mais
+								sem arriscar um cêntimo?</strong></p>
+
+						<p>No mundo da medicina, trata-se de uma descoberta conhecida como <strong>crescimento capilar
+								nanodinâmico</strong>, o qual é conhecido há já alguns meses, mas os investigadores
+							esperaram pelo final dos testes para anunciá-lo publicamente. Durante três meses, analisaram
+							mais de 60,000 pacientes dos EUA e Canadá. Com base nos resultados obtidos, foi possível
+							verificar que o método na forma do óleo ativo é inofensivo para a saúde. Assim, tomou-se a
+							decisão de torná-lo disponível com o nome <strong>VitaHair Max</strong> - o primeiro
+							tratamento mundial para a queda capilar, que garante uma regeneração 4 vezes mais rápida e
+							potente, tudo com o método de <u>nanoestimulação capilar.</u></p>
+
+						<img src="img/hair-loss.jpg" alt="">
+
+						<p style="text-align: left; width: 80%; margin:auto"><i>O método do Professor Marlow funciona em
+								três diferentes fases:<br>
+								1. Interrupção da perda capilar<br>
+								2. Regeneração e nutrição das células capilares<br>
+								3. Estimulação do corpo para dar início à produção de cabelos saudáveis e fortes </i>
+						</p>
+
+						<p>O <strong>VitaHair Max</strong> é uma combinação única de ingredientes ativos e estimulantes.
+							São capazes de regenerar células danificadas, impedir o encolhimento dos folículos pilosos e
+							estimular o corpo para o desenvolvimento do cabelo. Após cinco semanas de utilização, a
+							perda capilar será totalmente interrompida, permitindo ajudar na regeneração dos folículos
+							pilosos, fortalecer as raízes e tornar o cabelo mais denso em cerca de 73%. </p>
+
+						<p>O <strong>VitaHair Max</strong> é uma terapia científica, disponível com uma garantia de
+							satisfação em três vertentes: autenticidade, qualidade e satisfação. Se, após usar o
+							VitaHair Max, <strong>o seu cabelo não estiver 73% mais denso em 5 semanas</strong> entre em
+							contato com o Professor Marlow! A equipa dele fará de tudo para responder às suas
+							reclamações. Trata-se de uma garantia pessoal dada pelo Professor Marlow, confirmada pelo
+							fabricante do produto. Como tal, não estará a arriscar nada.</p>
+
+						<p>Na Portugal, a fórmula VitaHair Max apenas pode ser obtida se participar na plataforma de
+							descontos. Se quiser ter novamente um cabelo saudável, forte e denso, só precisa de clicar
+							no link abaixo. Atualmente, o VitaHair Max está disponível com um desconto de 50%. Mas
+							precisa de ser rápido, pois o número de embalagens é limitado.</p>
+
+
+
+
+						<div id="wizualkaS">
+							<a id="adrek" href="">
+								<div class="slogan">Excelente oferta!</div>
+								<img style="width:286px;;" src="img/vivesesenso_3_small.png" alt="">
+								<div class="button-ad">Veja como é &raquo;</div>
+							</a>
+						</div>
+
+						<p class="cta"><a style="font-size: 28px; line-height: 28px;" href="">Clique aqui para obter o
+								tratamento VitaHair Max com desconto</a></p>
+					</div>
+					<div class="cell right_side">
+						<h3>Ler mais:</h3>
+						<ul>
+							<li><img src="img/unnamed.jpg" alt="">
+								<p>Como cuidar da figura <a href="">MAIS&nbsp;&raquo;</a></p>
+							</li>
+							<li><img src="img/broken.jpg" alt="">
+								<p>Estes produtos engordam <a href="">MAIS&nbsp;&raquo;</a></p>
+							</li>
+							<li><img src="img/discover.jpg" alt="">
+								<p>Como viver um estilo de vida saudável <a href="">MAIS&nbsp;&raquo;</a></p>
+							</li>
+						</ul>
+						<div id="wizualkaL">
+							<a id="adrek" href="">
+								<div class="slogan">Excelente oferta!</div>
+								<img style="width:286px;;" src="img/vivesesenso_3_small.png" alt="">
+								<div class="button-ad">Veja como é &raquo;</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="cell left_side empty"></div>
+					<div class="cell content comments" id="comments">
+
+						<h3>Comentários</h3>
+						<style>
+							.grey {
+								background: #ededed;
+							}
+
+							.comments .hr {
+								border-top: 1px solid #ddd;
+								clear: both;
+							}
+
+							.comments .inner {
+								padding: 4%;
+								margin: 1em 0;
+							}
+
+							.comments .re {
+								margin: 0;
+								position: absolute;
+								top: 0;
+								right: 0;
+								background: #ededed;
+								height: 100%;
+								padding-left: 3%;
+							}
+
+							.comments .re img {
+								margin-right: 1em;
+								position: relative;
+								top: 4px;
+							}
+
+							.comments .re a {
+								color: #00456d;
+								text-decoration: none;
+							}
+
+							.comments .re a:hover {
+								text-decoration: underline;
+							}
+
+							.comments .post {
+								text-decoration: none;
+								color: #fff;
+								background: #00456d;
+								padding: 3px 10px;
+								font-size: 1.2em;
+								line-height: normal;
+								float: right;
+								border-radius: 3px;
+							}
+
+							.comments h3 {
+								font-size: 1.3em;
+								margin: 0 0 1em;
+							}
+
+							.replay {
+								float: right;
+							}
+
+							.comments .date {
+								position: relative;
+							}
+
+							.com-box .img img {
+								float: left;
+								margin-right: 20px;
+							}
+
+							.comments .rep {
+								width: 80%;
+								margin: 0 0 0 auto;
+								position: relative;
+								padding: 1.3em 0;
+							}
+
+							.comments .rep:before {
+								display: block;
+								content: '';
+								border-style: solid;
+								border-color: #d2d2d2;
+								border-width: 0 0 2px 2px;
+								height: 30px;
+								width: 30px;
+								position: absolute;
+								top: 10px;
+								right: 103%;
+							}
+
+							.comments .text p {
+								margin: 0;
+							}
+
+							.comments .author {
+								font-style: italic;
+								color: #0c58ca;
+								display: block;
+								margin: 0;
+							}
+
+							.comments .author:before {
+								content: '~'
+							}
+
+							.com-box .img {
+								width: 45px
+							}
+
+							.com-box .img img {
+								margin: auto;
+							}
+
+							.com-box {
+								display: table;
+								font-size: 0.8rem;
+								width: 100%;
+								margin: 0 0 1em;
+							}
+
+							.com-box .date {
+								font-size: 0.9em;
+								color: #9e9e9e;
+								padding: 0.5em;
+								margin: 0.5em 0 0;
+							}
+
+							.com-box .date>img {
+								cursor: pointer;
+								position: relative;
+								margin-top: -10px;
+								top: 7px;
+								right: -3px;
+							}
+
+							.com-box .cell {
+								display: table-cell;
+								vertical-align: top;
+							}
+
+							.comments .more {
+								margin: 2em 0 0;
+							}
+
+							.comments .more a {
+								color: #7a7a7a;
+								font-size: 1.2em;
+								text-decoration: none;
+								font-weight: bold;
+							}
+
+							.comments .more img {
+								padding-left: 0.3em;
+							}
+						</style>
+
+
+
+
+						<div class="hr"></div>
+						<div class="inner grey">
+							<div class="com-box">
+								<div class="cell img"><img src="img/author.png" alt=""></div>
+								<div class="cell text">
+									<p><span class="author">MagdaM</span>São ótimas notícias para mim. O meu cabelo tem
+										tido imensos problemas, e há muito tempo que tenho vindo a procurar um produto
+										capaz de me dar esperança. Gostaria de voltar a ter um cabelo bonito e comprido,
+										como nos tempos de juventude. Sinto imensa falta disso!</p>
+									<div style="clear:both"></div>
+									<div class="date white">
+										<script type="text/javascript">
+											date(-3);
+										</script> | avaliação <span class="green">96%</span>
+										<img src="img/like.png" onclick="vote(this)" alt=""> <img
+											src="img/dont-like.png" onclick="vote(this)" alt="">
+										<p class="re">
+											<a href="">
+												<img src="img/reply.png" alt="">
+												Resposta </a>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="com-box">
+								<div class="cell img"><img src="img/author.png" alt=""></div>
+								<div class="cell text">
+									<p><span class="author">Paula</span>Irei experimentar este produto com todo o gosto.
+										Já tinha ouvido falar destas investigações, mas, na primeira vez que tomei
+										conhecimento, ainda estavam em testes. E, claro, acabamos sempre por achar que
+										temos de esperar vários anos, e afinal - que surpresa agradável. Mal posso
+										esperar para começar a usá-lo. Tenho expetativas enormes.</p>
+									<div style="clear:both"></div>
+									<div class="date white">
+										<script type="text/javascript">
+											date(-3);
+										</script> | avaliação <span class="green">93%</span>
+										<img src="img/like.png" onclick="vote(this)" alt=""> <img
+											src="img/dont-like.png" onclick="vote(this)" alt="">
+										<p class="re">
+											<a href="">
+												<img src="img/reply.png" alt="">
+												Resposta </a>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="com-box">
+								<div class="cell img"><img src="img/author.png" alt=""></div>
+								<div class="cell text">
+									<p><span class="author">Nelson</span>Para mim é uma revelação, admito-o. Um colega
+										meu já o tinha usado e foi através dele que ouvi falar do produto. Para ser
+										sincero, não acreditei nele. Tive as minhas suspeitas, achei que ele andava a
+										usar uma peruca! Ele jurou a pés juntos que era verdade, quando voltou à fábrica
+										após as férias. Recuperou o cabelo, sendo que antes estava quase totalmente
+										careca. Eu disse-lhe que ele tinha posto um gato na cabeça! Hahaha e com essas
+										conversas chegámos ao ponto principal. Ele aconselhou-me a usar o VitaHair max.
+										Nunca tive muito cabelo, mas agora, depois de alguns dias de utilização, está a
+										crescer à frente! Fez-me sorrir - um homem há tantos anos careca e agora,
+										subitamente, o meu cabelo começou a crescer! É uma sensação estranha!</p>
+									<div style="clear:both"></div>
+									<div class="date white">
+										<script type="text/javascript">
+											date(-3);
+										</script> | avaliação <span class="green">98%</span>
+										<img src="img/like.png" onclick="vote(this)" alt=""> <img
+											src="img/dont-like.png" onclick="vote(this)" alt="">
+										<p class="re">
+											<a href="">
+												<img src="img/reply.png" alt="">
+												Resposta </a>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="com-box rep">
+								<div class="cell img"><img src="img/author.png" alt=""></div>
+								<div class="cell text">
+									<p><span class="author">Maria</span>ah, isto é-me tão útil. Na minha juventude,
+										andava sempre a pintar o cabelo, era moda. Fui loira, depois ligeiramente
+										platina, ruiva. Fazia isso regularmente. Não sei quando é que começou a cair
+										devido aos químicos. Queimei completamente o cabelo. Literalmente. Agora tenho
+										asas em vez de cabelo. Não sei o que fazer para voltar ao que era. Espero que
+										este método ajude.</p>
+									<div style="clear:both"></div>
+									<div class="date white">
+										<script type="text/javascript">
+											date(-3);
+										</script> | avaliação <span class="green">95%</span>
+										<img src="img/like.png" onclick="vote(this)" alt=""> <img
+											src="img/dont-like.png" onclick="vote(this)" alt="">
+										<p class="re">
+											<a href="">
+												<img src="img/reply.png" alt="">
+												Resposta </a>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="com-box rep">
+								<div class="cell img"><img src="img/author.png" alt=""></div>
+								<div class="cell text">
+									<p><span class="author">Michael</span>É aproveitar enquanto existe. Vivo no
+										estrangeiro, onde estas coisas aparecem mais cedo. Em duas semanas, a novidade
+										surgiu – a sua reputação está a espalhar-se rapidamente. Tive de comprá-lo aqui
+										pois não consigo encontrá-lo noutro lugar. E vi como as pessoas mudam depois de
+										usar a loção. Inacreditável.</p>
+									<div style="clear:both"></div>
+									<div class="date white">
+										<script type="text/javascript">
+											date(-3);
+										</script> | avaliação <span class="green">94%</span>
+										<img src="img/like.png" onclick="vote(this)" alt=""> <img
+											src="img/dont-like.png" onclick="vote(this)" alt="">
+										<p class="re">
+											<a href="">
+												<img src="img/reply.png" alt="">
+												Resposta </a>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="com-box rep">
+								<div class="cell img"><img src="img/author.png" alt=""></div>
+								<div class="cell text">
+									<p><span class="author">Cristiano</span>Já o usei. Funciona. Mas só receio uma
+										coisa. É um produto tão poderoso, e acreditem no que digo - eficaz, de tal forma
+										que os ladrões, assassinos e pervertidos vão usá-lo! E um homem desses vai
+										acabar por invadir um banco e depois já sabe. Vai esconder-se durante por um
+										mês, a polícia vai procurá-lo e no fim terá um aspeto totalmente diferente! E
+										depois?!</p>
+									<div style="clear:both"></div>
+									<div class="date white">
+										<script type="text/javascript">
+											date(-3);
+										</script> | avaliação <span class="green">89%</span>
+										<img src="img/like.png" onclick="vote(this)" alt=""> <img
+											src="img/dont-like.png" onclick="vote(this)" alt="">
+										<p class="re">
+											<a href="">
+												<img src="img/reply.png" alt="">
+												Resposta </a>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="com-box rep">
+								<div class="cell img"><img src="img/author.png" alt=""></div>
+								<div class="cell text">
+									<p><span class="author">Luis</span>Cristiano, será que podes acalmar-te em vez de
+										usares o vita hair max? O que é que estás para aí a dizer, pá? É claro que este
+										tratamento funciona e promove o crescimento capilar, mas não exageremos... e
+										existem impressões digitais, como decerto saberás. Respira fundo e usa produto
+										com mais cuidado para não te ir para os olhos.</p>
+									<div style="clear:both"></div>
+									<div class="date white">
+										<script type="text/javascript">
+											date(-3);
+										</script> | avaliação <span class="green">98%</span>
+										<img src="img/like.png" onclick="vote(this)" alt=""> <img
+											src="img/dont-like.png" onclick="vote(this)" alt="">
+										<p class="re">
+											<a href="">
+												<img src="img/reply.png" alt="">
+												Resposta </a>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="com-box rep">
+								<div class="cell img"><img src="img/author.png" alt=""></div>
+								<div class="cell text">
+									<p><span class="author">Victor</span>Mas agora deste-me esperança. Mal consigo
+										esperar pela minha loção. A sério, tenho a sensação de que desta vez vai
+										funcionar. Estou mesmo entusiasmado.</p>
+									<div style="clear:both"></div>
+									<div class="date white">
+										<script type="text/javascript">
+											date(-3);
+										</script> | avaliação <span class="green">97%</span>
+										<img src="img/like.png" onclick="vote(this)" alt=""> <img
+											src="img/dont-like.png" onclick="vote(this)" alt="">
+										<p class="re">
+											<a href="">
+												<img src="img/reply.png" alt="">
+												Resposta </a>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="com-box rep">
+								<div class="cell img"><img src="img/author.png" alt=""></div>
+								<div class="cell text">
+									<p><span class="author">Miguel</span>É algo interessante, muito interessante.
+										Lembro-me da minha avó esfregar o cabelo com mel, para que não caísse e ficasse
+										saudável, denso e brilhante. Mas o mel que temos hoje em dia já não é o mesmo.
+										No passado, a alimentação era melhor, mais higiénica. Hoje em dia, o stress
+										constante, os produtos químicos, os fumos... não conseguimos descansar nada. E
+										essas coisas refletem-se no cabelo também, imediatamente. Não há nada que
+										responda a alterações no ambiente como o cabelo. Como tal, não hesitei em
+										comprar este produto, porque vejo nele uma boa combinação de ingredientes.</p>
+									<div style="clear:both"></div>
+									<div class="date white">
+										<script type="text/javascript">
+											date(-3);
+										</script> | avaliação <span class="green">100%</span>
+										<img src="img/like.png" onclick="vote(this)" alt=""> <img
+											src="img/dont-like.png" onclick="vote(this)" alt="">
+										<p class="re">
+											<a href="">
+												<img src="img/reply.png" alt="">
+												Resposta </a>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="com-box">
+								<div class="cell img"><img src="img/author.png" alt=""></div>
+								<div class="cell text">
+									<p><span class="author">António</span>Acho que isto até era capaz de ganhar Prémio
+										Nobel. Mas nunca acontecerá. Os prémios só são atribuídos a coisas não tão
+										importantes assim. Coisas que não contribuem em nada para as nossas vidas. Estas
+										pessoas juntaram-se e trabalharam em algo dedicado à saúde humana, que não é uma
+										arma, não é utilizada para matar! E não fizeram algo para o cancro ou uma coisa
+										igualmente complexa, mas sim para problemas quotidianos, como obesidade ou perda
+										capilar! São estes os problemas das pessoas!!!!</p>
+									<div style="clear:both"></div>
+									<div class="date white">
+										<script type="text/javascript">
+											date(-2);
+										</script> | avaliação <span class="green">95%</span>
+										<img src="img/like.png" onclick="vote(this)" alt=""> <img
+											src="img/dont-like.png" onclick="vote(this)" alt="">
+										<p class="re">
+											<a href="">
+												<img src="img/reply.png" alt="">
+												Resposta </a>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="com-box">
+								<div class="cell img"><img src="img/author.png" alt=""></div>
+								<div class="cell text">
+									<p><span class="author">Júlia</span>Quando me olho no espelho, posso dizer que a
+										minha vida deu uma volta de cento e oitenta graus. De forma abruta. Comecei a
+										usar o VitaHair Max há três semanas. Não o comprei no país, mas sim no
+										estrangeiro. Também na internet, já que é mais barato. E acho que é a única
+										forma possível de comprá-lo. Seja como for, tinha uma falha enorme no topo da
+										minha cabeça. E isso não combina com uma mulher, especialmente com cabelo
+										comprido, até o meu marido fez referência a isso. Andava muito ansiosa. Não
+										consegui dormir durante vários dias e a situação só piorou. Já desesperada,
+										decidi experimentar o VitaHair Max. Não tinha escolha, simplesmente não havia
+										nada para mim. E assim, dia após dia, cheguei ao ponto em que me encontro hoje –
+										aplico o produto com a ajuda de um pequeno espelho, vejo o aspeto, pois no
+										espelho maior consigo ver o reflexo do pequeno. Não sei exatamente a percentagem
+										de crescimento do meu cabelo, mas é bastante na opinião muito.</p>
+									<div style="clear:both"></div>
+									<div class="date white">
+										<script type="text/javascript">
+											date(-2);
+										</script> | avaliação <span class="green">100%</span>
+										<img src="img/like.png" onclick="vote(this)" alt=""> <img
+											src="img/dont-like.png" onclick="vote(this)" alt="">
+										<p class="re">
+											<a href="">
+												<img src="img/reply.png" alt="">
+												Resposta </a>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="com-box">
+								<div class="cell img"><img src="img/author.png" alt=""></div>
+								<div class="cell text">
+									<p><span class="author">Álvaro</span>Andei 7 anos a lutar pelo meu cabelo! Sete anos
+										e disse a mim mesmo que não iria desistir. E foi o que fiz. Experimentei coisas
+										diferentes, fiz experiências na minha cabeça que deixariam qualquer pessoa
+										boquiaberta... a situação ficou ainda pior. Pensei que era simplesmente
+										impossível! Mas eventualmente apostei no Vitahair Max. E foi aí que ganhei.
+										Venci esta luta!</p>
+									<div style="clear:both"></div>
+									<div class="date white">
+										<script type="text/javascript">
+											date(-2);
+										</script> | avaliação <span class="green">100%</span>
+										<img src="img/like.png" onclick="vote(this)" alt=""> <img
+											src="img/dont-like.png" onclick="vote(this)" alt="">
+										<p class="re">
+											<a href="">
+												<img src="img/reply.png" alt="">
+												Resposta </a>
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="com-box">
+								<div class="cell img"><img src="img/author.png" alt=""></div>
+								<div class="cell text">
+									<p><span class="author">Francisco</span>Custou-me a admitir a minha calvície e a ir
+										trabalhar sem colocar um chapéu na cabeça. Mas noto agora que existe uma
+										oportunidade para conseguir uma mudança significativa. Estou muito feliz pelo
+										fato de alguns destes cientistas estarem a trabalhar para o bem-estar das
+										pessoas comuns, para que estas tenham uma vida mais confortável, pois é disso
+										que se trata.</p>
+									<div style="clear:both"></div>
+									<div class="date white">
+										<script type="text/javascript">
+											date(-2);
+										</script> | avaliação <span class="green">95%</span>
+										<img src="img/like.png" onclick="vote(this)" alt=""> <img
+											src="img/dont-like.png" onclick="vote(this)" alt="">
+										<p class="re">
+											<a href="">
+												<img src="img/reply.png" alt="">
+												Resposta </a>
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="com-box rep">
+								<div class="cell img"><img src="img/author.png" alt=""></div>
+								<div class="cell text">
+									<p><span class="author">João</span>Não vou escrever muito, pois não é meu estilo,
+										mas, se houver alguém a questionar-se, recomendo definitivamente este produto. O
+										cabelo não necessita de qualquer cuidado especial, cresce sozinho!</p>
+									<div style="clear:both"></div>
+									<div class="date white">
+										<script type="text/javascript">
+											date(-3);
+										</script> | avaliação <span class="green">100%</span>
+										<img src="img/like.png" onclick="vote(this)" alt=""> <img
+											src="img/dont-like.png" onclick="vote(this)" alt="">
+										<p class="re">
+											<a href="">
+												<img src="img/reply.png" alt="">
+												Resposta </a>
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="com-box rep">
+								<div class="cell img"><img src="img/author.png" alt=""></div>
+								<div class="cell text">
+									<p><span class="author">Helena</span>funciona claramente com o meu marido, eu ainda
+										não preciso, mas um dia quem sabe...</p>
+									<div style="clear:both"></div>
+									<div class="date white">
+										<script type="text/javascript">
+											date(-3);
+										</script> | avaliação <span class="green">100%</span>
+										<img src="img/like.png" onclick="vote(this)" alt=""> <img
+											src="img/dont-like.png" onclick="vote(this)" alt="">
+										<p class="re">
+											<a href="">
+												<img src="img/reply.png" alt="">
+												Resposta </a>
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="com-box rep">
+								<div class="cell img"><img src="img/author.png" alt=""></div>
+								<div class="cell text">
+									<p><span class="author">José</span>Bom, vou dizer isto: não tenho nada a perder,
+										grande parte do cabelo já caiu... então basicamente vou apostar nele!</p>
+									<div style="clear:both"></div>
+									<div class="date white">
+										<script type="text/javascript">
+											date(-3);
+										</script> | avaliação <span class="green">100%</span>
+										<img src="img/like.png" onclick="vote(this)" alt=""> <img
+											src="img/dont-like.png" onclick="vote(this)" alt="">
+										<p class="re">
+											<a href="">
+												<img src="img/reply.png" alt="">
+												Resposta </a>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="com-box">
+								<div class="cell img"><img src="img/author.png" alt=""></div>
+								<div class="cell text">
+									<p><span class="author">LadyBlack</span>Vou experimentá-lo agora, não queria andar a
+										pulverizar o cabelo, mas com este produto não tenho dúvidas de que vou ao
+										cabeleireiro quando terminar o tratamento</p>
+									<div style="clear:both"></div>
+									<div class="date white">
+										<script type="text/javascript">
+											date(-2);
+										</script> | avaliação <span class="green">97%</span>
+										<img src="img/like.png" onclick="vote(this)" alt=""> <img
+											src="img/dont-like.png" onclick="vote(this)" alt="">
+										<p class="re">
+											<a href="">
+												<img src="img/reply.png" alt="">
+												Resposta </a>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="com-box">
+								<div class="cell img"><img src="img/author.png" alt=""></div>
+								<div class="cell text">
+									<p><span class="author">Eduardo</span>Também aconselho a experimentarem como uma
+										aposta. Em cinco semanas, o meu cabelo está definitivamente mais forte. Funciona
+										como um relógio suíço. E perdi a aposta.</p>
+									<div style="clear:both"></div>
+									<div class="date white">
+										<script type="text/javascript">
+											date(-2);
+										</script> | avaliação <span class="green">96%</span>
+										<img src="img/like.png" onclick="vote(this)" alt=""> <img
+											src="img/dont-like.png" onclick="vote(this)" alt="">
+										<p class="re">
+											<a href="">
+												<img src="img/reply.png" alt="">
+												Resposta </a>
+										</p>
+									</div>
+								</div>
+							</div>
+
+
+
+							<div class="com-box rep">
+								<div class="cell img"><img src="img/author.png" alt=""></div>
+								<div class="cell text">
+									<p><span class="author">More_hair</span>Sim, gosto!</p>
+									<div style="clear:both"></div>
+									<div class="date white">
+										<script type="text/javascript">
+											date(-3);
+										</script> | avaliação <span class="green">100%</span>
+										<img src="img/like.png" onclick="vote(this)" alt=""> <img
+											src="img/dont-like.png" onclick="vote(this)" alt="">
+										<p class="re">
+											<a href="">
+												<img src="img/reply.png" alt="">
+												Resposta </a>
+										</p>
+									</div>
+								</div>
+							</div>
+
+
+							<p class="more"><a href="">Mostrar mais<img src="img/more.png" alt=""></a></p>
+						</div>
+						<a href="" class="hidden-xs post">Escrever comentários</a>
+					</div>
+					<div class="cell right_side empty"></div>
+				</div>
+			</div>
+
+			<div class="hidden-xs footer" id="footer_nav">
+				<nav>
+					<ul>
+						<li><a href="">Mundo</a></li>
+						<li><a href="">Saúde</a></li>
+						<li><a href="">Beleza</a></li>
+						<li><a href="">Estilo de vida</a></li>
+						<li><a href="">Visões</a></li>
+						<li><a href="">Moda</a></li>
+						<li><a href="">Negócios</a></li>
+						<li><a href="">Ecologia</a></li>
+						<li><a href="">Estilo</a></li>
+						<li><a href=""> </a></li>
+						<li><a href=""> </a></li>
+					</ul>
+					<div style="clear:both;"></div>
+				</nav>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="hidden-xs footer sub_menu">
+		<div class="wrapper">
+		</div>
+	</div>
+	<style>
+		@media (max-width:767px) {
+			.header .more {
+				font-size: 0;
+			}
+
+			.header .more img {
+				margin: 6px 4px;
+			}
+
+			.content {
+				padding: 0;
+				width: 94%;
+				margin: auto;
+			}
+
+			.table,
+			.row,
+			.cell {
+				display: block
+			}
+
+			.left_side,
+			.right_side,
+			.box {
+				display: none;
+			}
+		}
+
+		@media (min-width:767px) and (max-width:1000px) {
+			.comments .text .re {
+				font-size: 0;
+			}
+
+			.com-box .date {
+				padding-right: 30px;
+			}
+		}
+
+		@media (max-width:600px) {
+			.comments .text .re {
+				font-size: 0;
+			}
+
+			.comments .re img {
+				top: 30%;
+			}
+
+			.com-box .date {
+				padding-right: 30px;
+				line-height: 1.5em;
+			}
+		}
+	</style>
+
+	<style>
+		#custom_last_buyer {
+			position: fixed;
+			bottom: 10px;
+			left: 10px;
+			background: #efefef;
+			opacity: 0;
+			box-shadow: 0 0 4px 0 rgba(0, 0, 0, .4);
+			border-radius: 2px;
+			padding: 5px;
+			z-index: 999999;
+			height: 0;
+			width: calc(100% - 20px);
+			max-width: 600px;
+			font-size: 0;
+			width: auto;
+		}
+
+		#custom_last_buyer p {
+			font-family: sans-serif !important;
+			text-align: left !important;
+			display: inline-block !important;
+			vertical-align: middle !important;
+			padding: 1% !important;
+			margin: 0 !important;
+			text-indent: 0 !important;
+			font-size: 14px !important;
+			color: #000 !important;
+			;
+			line-height: 20px !important;
+		}
+
+		#custom_last_buyer .lb-name,
+		#custom_last_buyer .lb-location {
+			font-weight: bold
+		}
+
+		.fadeInBottom {
+			opacity: 0;
+			animation: fadeInBott .5s 1 1s forwards;
+		}
+
+		.fadeOutBottom {
+			opacity: 1;
+			animation: fadeOutBott .5s 1 1s forwards;
+		}
+
+		@keyframes customFadeIn {
+			from {
+				opacity: 0;
+				transform: translate3d(0, 100%, 0);
+			}
+
+			to {
+				opacity: 1;
+				transform: none;
+			}
+		}
+
+		#custom_last_buyer.lb-custom-fade-in {
+			opacity: 0;
+			animation-name: customFadeIn;
+			animation-duration: 1s;
+			animation-fill-mode: both;
+			height: auto;
+		}
+
+		@keyframes customFadeOut {
+			from {
+				opacity: 1;
+			}
+
+			to {
+				opacity: 0;
+				transform: translate3d(0, 100%, 0);
+				bottom: 0;
+			}
+		}
+
+		#custom_last_buyer.lb-custom-fade-out {
+			opacity: 0;
+			animation-name: customFadeOut;
+			animation-duration: 1s;
+			animation-fill-mode: both;
+			height: auto;
+		}
+
+		@media(max-width: 630px) {
+			#custom_last_buyer {
+				width: 100%;
+				left: 0;
+				bottom: 0;
+			}
+
+			#custom_last_buyer p {
+				font-size: 12px;
+			}
+
+			#custom_last_buyer p a {
+				font-size: 12px;
+				line-height: 12px;
+			}
+		}
+	</style>
+
+</body>
+
+</html>
